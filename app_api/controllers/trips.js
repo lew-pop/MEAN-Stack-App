@@ -1,36 +1,40 @@
 const mongoose = require('mongoose'); //.set('debug',true);
-const model = mongoose.model('trips');
+const Model = mongoose.model('trips');
+
+
 
 // Get: /trips = lists all the trips
 const tripsList = async (req, res) => {
-    model
+    Model
         .find({}) // empty filter for all
         .exec((err, trips) => {
             if (!trips) {
                 return res
                     .status(404)
-                    .json({ "message": "trips not found "});
+                    .json({ "message": "trips not found" });
             } else if (err) {
                 return res
                     .status(404)
                     .json(err);
             } else {
-                return res
+                 return res
                     .status(200)
                     .json(trips);
             }
+
+
         });
 };
 
 // Get: /trips/:tripCode - returns a single trip
 const tripsFindCode = async (req, res) => {
-    model 
+    Model
         .find({ 'code': req.params.tripCode }) // empty filter for all
         .exec((err, trip) => {
             if (!trip) {
                 return res
                     .status(404)
-                    .json({ "message": "trip not found "});
+                    .json({ "message": "trip not found " });
             } else if (err) {
                 return res
                     .status(404)
@@ -40,11 +44,13 @@ const tripsFindCode = async (req, res) => {
                     .status(200)
                     .json(trip);
             }
+
+
         });
 };
 
 module.exports = {
     tripsList,
     tripsFindCode
-    
+
 }
