@@ -12,7 +12,7 @@ const register = (req, res) => {
   user.setPassword(req.body.password);
   user.save((err) => {
     if (err) {
-      res.status(404).json(err);
+      res.status(400).json(err);
     } else {
       const token = user.generateJwt();
       res.status(200).json({ token });
@@ -38,5 +38,5 @@ const login = (req, res) => {
 };
 module.exports = {
   register,
-  login,
+  login
 };

@@ -3,8 +3,8 @@ const Trip = mongoose.model("trips");
 const User = mongoose.model("users");
 
 const getUser = (req, res, callback) => {
-  if (req.payload && req.payload.email) {
-    User.findOne({ email: req.payload.email }).exec((err, user) => {
+  if (req.auth && req.auth.email) {
+    User.findOne({ email: req.auth.email }).exec((err, user) => {
       if (!user) {
         return res.status(404).json({ message: "User not found" });
       } else if (err) {
@@ -46,7 +46,7 @@ const tripsFindCode = async (req, res) => {
 };
 
 const tripsAddTrip = async (req, res) => {
-  console.log('tripsAddTrip invoked with:\n' + req.body);
+  console.log(req.body);
   getUser(req, res, (req, res) => {
     Trip.create(
       {
@@ -114,5 +114,5 @@ module.exports = {
   tripsList,
   tripsFindCode,
   tripsAddTrip,
-  tripsUpdateTrip,
+  tripsUpdateTrip
 };
