@@ -62,3 +62,4 @@ connect();
 
 
 require("./models/travlr");
+require("./models/user");
