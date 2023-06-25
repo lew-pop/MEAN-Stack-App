@@ -11,7 +11,7 @@ const getUser = (req, res, callback) => {
         console.log(err);
         return res.status(404).json(err);
       }
-      callback(req, res, user.name);
+      callback(req, res, user.email);
     });
   } else {
     return res.status(404).json({ message: "User not found" });

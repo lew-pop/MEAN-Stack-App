@@ -2,19 +2,23 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { TripDataService } from "../services/trip-data.service";
+
 @Component({
   selector: "app-add-trip",
   templateUrl: "./add-trip.component.html",
   styleUrls: ["./add-trip.component.css"],
 })
 export class AddTripComponent implements OnInit {
+
   addForm: FormGroup;
   submitted = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private tripService: TripDataService
   ) {}
+
   ngOnInit() {
     this.addForm = this.formBuilder.group({
       _id: [],
@@ -25,7 +29,7 @@ export class AddTripComponent implements OnInit {
       resort: ["", Validators.required],
       perPerson: ["", Validators.required],
       image: ["", Validators.required],
-      description: ["", Validators.required],
+      description: ["", Validators.required]
     });
   }
   onSubmit() {
