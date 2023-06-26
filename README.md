@@ -9,12 +9,13 @@ The backend of the Travlr Getaways application utilizes MongoDB, a NoSQL databas
 # Functionality
 
 JavaScript is a programming language used to write code for web applications. JSON is JavaScript Object Notation, a file format for sending data across servers and the internet.
-In progress...
+
+The Express HTML page was refactored by implementing handlebars templates to render the web page dynamically.
 
 # Testing
 
-In progess...
+Testing API endpoints is essential to ensure the Angular SPA properly uses HTTP request methods to manage data in the database. Postman is a valuable tool for testing API interactions and HTTP request methods. Postman allows you to send HTTP requests to the API endpoints and validate the responses. Creating different test cases for various scenarios with the appropriate route and HTTP request method is essential for validating API interactions. The HTTP request methods are GET, POST, PUT, and DELETE. Selecting the proper method when making HTTP requests in Postman is essential. It’s also important to test both success and failure scenarios.# Reflection
 
 # Reflection
 
-In progress...
+This course has helped me reach my professional goals by giving me experience working with a command-line interface and version control pipeline. This course also gave me insight into how various application components work and interface. 
