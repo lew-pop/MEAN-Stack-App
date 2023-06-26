@@ -8,6 +8,8 @@ The backend of the Travlr Getaways application utilizes MongoDB, a NoSQL databas
 
 # Functionality
 
+JavaScript is a programming language used to write code for web applications. JSON is JavaScript Object Notation, a file format for sending data across servers and the internet.
+
 
 # Testing
 
