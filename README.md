@@ -1,5 +1,7 @@
 ## Travlr Getaways Travel Booking App
 
+### Repository Overview:
+The Travlr Getaways Application showcases my ability to develop complex, scalable web applications, demonstrating proficiency in modern web technologies and architectural patterns.
 ### Architecture
 
 The **Travlr Getaways Application** is a sophisticated travel booking platform featuring a dual architecture: an admin Single-Page Application (SPA) developed with Angular and CSS Bootstrap, and a customer-facing page built using Express HTML following the Model-View-Controller (MVC) pattern.
@@ -57,4 +59,4 @@ This project significantly advanced my professional skills by providing hands-on
 - **Version Control:** Improved understanding of version control systems and workflows.
 - **Component Integration:** Gained insights into the seamless integration and interaction of various application components.
 
-The Travlr Getaways Application is a testament to my ability to develop complex, scalable web applications, showcasing my proficiency in modern web technologies and architectural patterns.
+
